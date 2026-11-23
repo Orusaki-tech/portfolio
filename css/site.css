@@ -2,6 +2,7 @@
   --bg: #ffffff;
   --fg: #0a0a0a;
   --muted: #5e5e5e;
+  --secondary: #0f7a43;
   --line: #e7e7e7;
   --soft: #f6f6f6;
   --invert: #0a0a0a;
@@ -17,6 +18,7 @@ html[data-theme="dark"] {
   --bg: #090909;
   --fg: #f4f4f4;
   --muted: #a3a3a3;
+  --secondary: #3ddb86;
   --line: #242424;
   --soft: #141414;
   --invert: #f4f4f4;
@@ -148,7 +150,7 @@ main {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--secondary);
 }
 
 h1 {
@@ -204,6 +206,7 @@ h1 {
   font-weight: 400;
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   letter-spacing: -0.03em;
+  color: var(--secondary);
 }
 
 .socials {
@@ -279,7 +282,7 @@ h1 {
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--secondary);
 }
 
 h2 {
@@ -304,6 +307,7 @@ h2 {
 .shot {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -349,7 +353,7 @@ h2 {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--secondary);
 }
 
 .capabilities {
@@ -389,6 +393,7 @@ h2 {
   font-weight: 400;
   font-size: 1.8rem;
   letter-spacing: -0.03em;
+  color: var(--secondary);
 }
 
 .chips {
@@ -486,9 +491,4 @@ h2 {
   .desk-nav { display: flex; }
   .tabbar { display: none; }
   main { padding-bottom: 4rem; }
-
-  .shot-link {
-    width: min(1100px, calc(100vw - 4rem));
-    margin-inline: calc((100% - min(1100px, 100vw - 4rem)) / 2);
-  }
 }
