@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geospatial — Okware Tom Polycarp</title>
+  <meta name="description" content="Flood mapping in Nyatike, boundary validation, Tana River, and satellite mineral studies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html">Okware<span>Nairobi · Kampala</span></a>
+      <div class="header-actions">
+        <nav class="desk-nav" aria-label="Primary">
+          <a href="index.html">Roles</a>
+          <a href="geo.html" aria-current="page">Geospatial</a>
+          <a href="systems.html">Systems</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <div class="shell">
+      <p class="kicker">Geospatial, software and data engineer</p>
+      <h1>Geospatial</h1>
+      <p class="intro">I studied this. The first serious piece was a flood map for Nyatike, Migori: Sentinel-1 through the cloud, Sentinel-2 and a random forest for the land the water sat on, about 4,366 hectares, 91.8% on the validation set. After the degree I kept going, into boundaries, a county health map, and a mineral study.</p>
+      <div class="list">
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Floods</span><span class="tag">Degree project</span></div>
+          <h2>Nyatike, Migori</h2>
+          <p class="summary">Rapid flood extent and damage assessment for Nyatike constituency.</p>
+          <p class="detail">The rivers Kuja and Migori break their banks, and a ground count of every household is too slow for the people who have to respond. I mapped the water with Sentinel-1, classified the land cover with Sentinel-2, and subtracted one from the other so the damaged classes were visible. Earth Engine ran the processing. The report is the University of Nairobi final project, May 2024. I can walk through it.</p>
+          <p class="stack">Sentinel-1 · Sentinel-2 · Google Earth Engine · Random Forest</p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Boundaries</span><span class="tag">Public</span></div>
+          <h2>RealitySync</h2>
+          <p class="summary">A place to check a boundary before you trust it.</p>
+          <p class="detail">Kenya’s administrative boundaries, from the country down through the county to the sub-county, need a person or a program willing to say a polygon is wrong before it is used to train a model. RealitySync does that check, keeps the curated set, and shows it on a MapLibre map. dbt holds the models on PostGIS. Docker, Terraform, and Cloud Build ship it, with Nginx in front. The paper was accepted as a poster at IEEE AP-GARSS 2026 in Qingdao.</p>
+          <p class="stack">FastAPI · PostGIS · rasterio · TiTiler · dbt · MapLibre · Docker · Terraform · Cloud Build</p>
+          <p class="links"><a href="https://github.com/Orusaki-tech/portal" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Tana River</span><span class="tag">Private</span></div>
+          <h2>Climate Pulse</h2>
+          <p class="summary">Climate, health, and gender-based violence, looked at together for Tana River County.</p>
+          <p class="detail">The question was where the county is exposed, including gaps in emergency obstetric care. It uses the same geospatial stack as RealitySync. The repository is private because the material is health and policy. Ask me and I will walk through it.</p>
+          <p class="stack">FastAPI · PostgreSQL · raster processing · MapLibre</p>
+          <p class="note">Code is not public. A walkthrough is available on request.</p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Earth Engine</span><span class="tag">Public</span></div>
+          <h2>Mining satellite study</h2>
+          <p class="summary">One study area, looked at twice, twenty years apart.</p>
+          <p class="detail">The box is about 4.8°N–5.1°N and 29.3°E–29.6°E. ASTER picks out clay, iron, and carbonate. PALSAR picks out lineaments. Both periods are 2001–2006 and 2023–2024, with SRTM underneath so the geology has a ground. A third notebook puts the two together.</p>
+          <p class="stack">Google Earth Engine · geemap · ASTER · ALOS PALSAR · SRTM · Jupyter</p>
+          <p class="links"><a href="https://github.com/Orusaki-tech/mining" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Conservation</span><span class="tag">Public</span></div>
+          <h2>Elephant mortality in Zimbabwe</h2>
+          <p class="summary">Where elephants died in Zimbabwe, and the cause written on the record.</p>
+          <p class="detail">This was an ArcGIS Pro assignment. I mapped the deaths with cause and location. The PDF in the repository is the whole piece of work.</p>
+          <p class="stack">ArcGIS Pro · vector GIS</p>
+          <p class="links">
+            <a href="https://github.com/Orusaki-tech/Elephant-Mortality-In-Zimbabwe" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/Orusaki-tech/Elephant-Mortality-In-Zimbabwe/blob/main/Okware%20Tom%20Elephant%20Mortality%20Assignment.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+          </p>
+        </article>
+      </div>
+      <p class="section-label">What this work uses</p>
+      <ul class="capabilities">
+        <li>
+          <strong>Raster and vector processing</strong>
+          <span>rasterio, shapely, pyproj, PostGIS, and TiTiler for serving raster tiles.</span>
+        </li>
+        <li>
+          <strong>Maps in the browser</strong>
+          <span>Next.js with MapLibre for reviewing boundaries and county signals.</span>
+        </li>
+        <li>
+          <strong>Earth Engine notebooks</strong>
+          <span>ASTER alteration, PALSAR lineaments, and SRTM elevation, compared across two periods.</span>
+        </li>
+        <li>
+          <strong>Flood mapping</strong>
+          <span>Sentinel-1 extent, Sentinel-2 land cover, Earth Engine, for Nyatike in Migori.</span>
+        </li>
+        <li>
+          <strong>Desktop GIS</strong>
+          <span>ArcGIS Pro for the Zimbabwe elephant mortality map.</span>
+        </li>
+      </ul>
+      <section class="role-block contact-block" id="contact">
+        <h2>Get in touch</h2>
+        <p class="intro">I work between Nairobi and Kampala. Email is the reliable way to reach me. If the role is geospatial software, a data pipeline, a backend, or the deploy around them, write. I will walk through the private code.</p>
+        <p class="reach"><a href="mailto:okwaretom12@gmail.com">okwaretom12@gmail.com</a></p>
+        <ul class="contact-list">
+          <li><a href="tel:+254727504393">Phone <span>+254 727 504 393</span></a></li>
+          <li><a href="https://github.com/Orusaki-tech" target="_blank" rel="noopener noreferrer">GitHub <span>Orusaki-tech</span></a></li>
+          <li><a href="https://www.linkedin.com/in/tom-okware-543abb218/" target="_blank" rel="noopener noreferrer">LinkedIn <span>Tom Okware</span></a></li>
+          <li><a href="https://x.com/OkwareTomPo" target="_blank" rel="noopener noreferrer">X <span>OkwareTomPo</span></a></li>
+          <li><a href="https://www.credly.com/users/okware-tom" target="_blank" rel="noopener noreferrer">Credly <span>okware-tom</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <nav class="tabbar" aria-label="Primary">
+    <a href="index.html">Roles</a>
+    <a href="geo.html" aria-current="page">Geo</a>
+    <a href="systems.html">Systems</a>
+    <a href="about.html">About</a>
+  </nav>
+  <script src="js/site.js"></script>
+</body>
+</html>

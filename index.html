@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Okware Tom Polycarp — Geospatial, software and data engineer</title>
+  <meta name="description" content="Okware Tom Polycarp, geospatial, software and data engineer. Spatial data, APIs, and cloud deploys, between Nairobi and Kampala.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html">Okware<span>Nairobi · Kampala</span></a>
+      <div class="header-actions">
+        <nav class="desk-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Roles</a>
+          <a href="geo.html">Geospatial</a>
+          <a href="systems.html">Systems</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <div class="shell">
+      <h1>Okware Tom Polycarp</h1>
+      <p class="role">Geospatial, software and data engineer.</p>
+      <p class="intro">I am a geospatial, software and data engineer who bridges spatial data, backend/full-stack engineering, and cloud infrastructure. With a BSc in Geospatial Engineering from the University of Nairobi and a Kubernetes &amp; Cloud Native Associate (KCNA) credential, I specialize in turning raw data and spatial datasets into automated pipelines, APIs, and production web applications. My work spans validating administrative boundaries in RealitySync (using PostGIS, dbt, GeoJSON, and GCP Cloud Build, accepted for IEEE AP-GARSS 2026), architecting multi-worker systems like EventFlow, building an agricultural market data ETL API (Pulse Price AI, winner of the Africa AI Week Hackathon 2025), and shipping a live full-stack ERP for Shwari Phones / Affordable Gadgets KE on GCP with Docker and Terraform.</p>
+      <p class="section-label">What I am best suited for</p>
+      <ul class="capabilities">
+        <li>
+          <strong>Geospatial Software / Cloud GIS Engineer</strong>
+          <span>Roles that need someone who understands spatial data (PostGIS, GeoJSON, Rasterio, administrative boundaries) and can write production Python/TypeScript code, build APIs, and automate data pipelines—rather than relying solely on point-and-click GIS tools.</span>
+        </li>
+        <li>
+          <strong>Spatial Data / Data &amp; ETL Engineer</strong>
+          <span>Building automated ingestion, cleaning, transformation (dbt, Python, SQL), and validation workflows where data accuracy, structure, and reliability matter.</span>
+        </li>
+        <li>
+          <strong>Backend or Full-Stack Engineer (Python / TypeScript)</strong>
+          <span>Building APIs (FastAPI, Django REST), relational/event-driven backends (PostgreSQL, Redis, CQRS/outbox patterns), and web interfaces (Next.js, React) for small-to-midsize teams or fast-moving product environments.</span>
+        </li>
+        <li>
+          <strong>Cloud &amp; DevOps-Oriented Application Engineer</strong>
+          <span>Setting up containerized deployments (Docker), Infrastructure as Code (Terraform, CloudFormation), CI/CD pipelines, and monitoring (Prometheus, Grafana) on cloud platforms like GCP or AWS.</span>
+        </li>
+        <li>
+          <strong>Applied AI / Data Pipeline Builder (Early-Stage / Prototyping)</strong>
+          <span>Turning unstructured or domain-specific data (such as agricultural or spatial data) into usable APIs and applications, as shown by my hackathon win and applied projects.</span>
+        </li>
+      </ul>
+      <p class="socials">
+        <a href="mailto:okwaretom12@gmail.com">okwaretom12@gmail.com</a>
+        <a href="https://github.com/Orusaki-tech" target="_blank" rel="noopener noreferrer">GitHub · Orusaki-tech</a>
+        <a href="https://www.linkedin.com/in/tom-okware-543abb218/" target="_blank" rel="noopener noreferrer">LinkedIn · Tom Okware</a>
+        <a href="https://x.com/OkwareTomPo" target="_blank" rel="noopener noreferrer">X · OkwareTomPo</a>
+      </p>
+      <nav class="jumps" aria-label="Roles">
+        <a href="#interface">Interface</a>
+        <a href="#frontend">Frontend</a>
+        <a href="#backend">Backend</a>
+        <a href="#geospatial">Geospatial</a>
+        <a href="#data">Data</a>
+          <a href="#devops">DevOps</a>
+          <a href="#monitoring">Monitoring</a>
+          <a href="#contact">Get in touch</a>
+        </nav>
+
+      <section class="role-block" id="interface">
+        <h2>Interface</h2>
+        <p class="intro">These are the pages a person opens. I worked out the flow, then I built it.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Shop</span><span class="tag">Live</span></div>
+            <h2>Affordable Gadgets</h2>
+            <p class="summary">Staff were receipting sales, stock, and the day’s money by hand, across 200 to 500 products, and enquiries were dying in chat. The storefront is for browsing, comparing four phones, and leaving a lead. The console is where the shop runs stock, orders, returns, and the money. M-Pesa and Pesapal take the payment.</p>
+            <a class="shot-link" href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img class="shot" src="images/affordable-gadgets.png" alt="Affordable Gadgets storefront, with a budget search and a Samsung Galaxy Z Fold banner." width="1280" height="800">
+            </a>
+            <p class="links">
+              <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Firm</span><span class="tag">Live</span></div>
+            <h2>FELBright &amp; Co.</h2>
+            <p class="summary">An accounting firm. I built the public site, the CPA academy, and the place students and faculty sign in. It is live at felbright.com.</p>
+            <a class="shot-link" href="https://felbright.com" target="_blank" rel="noopener noreferrer">
+              <img class="shot" src="images/felbright.png" alt="FELBright and Co. homepage, with audit, tax, and CPA Academy services." width="1280" height="800">
+            </a>
+            <p class="links"><a href="https://felbright.com" target="_blank" rel="noopener noreferrer">felbright.com</a></p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Community</span><span class="tag">Live</span></div>
+            <h2>SCALE</h2>
+            <p class="summary">SCALE works with women, girls, and young people in Luweero. They can change the words and pictures in the browser, so a sentence does not wait on a developer.</p>
+            <p class="links"><a href="https://community-hub-lime.vercel.app" target="_blank" rel="noopener noreferrer">Live site</a></p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Events</span><span class="tag">Private</span></div>
+            <h2>EventFlow</h2>
+            <p class="summary">A place to find something to go to, and a desk for the person putting it on: listings, tickets, payouts. I watch the API from Grafana when it gets slow or starts failing. The organiser desk stays private.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Ministry</span><span class="tag">Private</span></div>
+            <h2>World Healing Trinity Place</h2>
+            <p class="summary">A ministry on Trinity Heights Road in Kampala. Worship, a healing ministry, vocational training, and a way for someone to give. I built the site a visitor can actually read. The code stays private.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block" id="frontend">
+        <h2>Frontend engineering</h2>
+        <p class="intro">Same sites. This is the code that runs in the browser.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Next.js</span><span class="tag">Live</span></div>
+            <h2>Affordable Gadgets storefront</h2>
+            <p class="summary">Next.js shop. Search, filters, a comparison of four products, and a checkout that becomes a sales lead.</p>
+            <a class="shot-link" href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img class="shot" src="images/affordable-gadgets.png" alt="Affordable Gadgets storefront, with a budget search and a Samsung Galaxy Z Fold banner." width="1280" height="800">
+            </a>
+            <p class="links">
+              <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">React</span><span class="tag">Live</span></div>
+            <h2>Affordable Gadgets admin</h2>
+            <p class="summary">The screen the shop actually lives in: products, units, orders, leads, promotions, delivery, returns, and the day’s money. Sales, stock, and finance are separate roles. The console stays private.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Next.js</span><span class="tag">Private</span></div>
+            <h2>EventFlow web</h2>
+            <p class="summary">Next.js for the public site and the organiser console. A React Native app sits with the site. The organiser desk and the code stay private.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">MapLibre</span><span class="tag">Public code</span></div>
+            <h2>RealitySync map</h2>
+            <p class="summary">A Next.js and MapLibre screen for sitting with a boundary and deciding whether it is good enough to keep.</p>
+            <p class="links">
+              <a href="geo.html">Geospatial write-up</a>
+              <a href="https://github.com/Orusaki-tech/portal" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Vite</span><span class="tag">Live</span></div>
+            <h2>FELBright, SCALE, and the ministry site</h2>
+            <p class="summary">React and Vite for FELBright and the ministry. TanStack Start for SCALE, because the editors needed the page and the content studio in one app.</p>
+            <p class="links">
+              <a href="https://felbright.com" target="_blank" rel="noopener noreferrer">felbright.com</a>
+              <a href="https://community-hub-lime.vercel.app" target="_blank" rel="noopener noreferrer">SCALE</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block" id="backend">
+        <h2>Backend engineering</h2>
+        <p class="intro">The part that holds the stock, takes the payment, and answers the map.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Django</span><span class="tag">Live</span></div>
+            <h2>Affordable Gadgets API</h2>
+            <p class="summary">Django keeps the inventory and the orders for 200 to 500 products. M-Pesa STK push, callbacks, refunds, and Pesapal replaced the handwritten receipt. A TypeScript client generated from the OpenAPI spec keeps the shop and the admin on the same API. The code stays private.</p>
+            <p class="links">
+              <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">FastAPI</span><span class="tag">Live</span></div>
+            <h2>EventFlow API</h2>
+            <p class="summary">FastAPI for discovery, listings, and tickets. Stripe takes the payment. Eight background workers take the jobs that should not wait on the request. pgvector finds events by place and by community, Google Maps supplies the traffic, and a Google calendar stays in sync. The organiser desk and the code stay private.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">FastAPI</span><span class="tag">Public code</span></div>
+            <h2>Pulse Price AI</h2>
+            <p class="summary">First place at Africa AI Week 2025. Gemini gathers agricultural prices for a farmer still on a basic phone. A separate FastAPI app only reads them, so a messy model response stays in the collector, and the price goes out over USSD.</p>
+            <p class="links"><a href="https://github.com/Orusaki-tech/ai-hack" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block" id="geospatial">
+        <h2>Geospatial software and data</h2>
+        <p class="intro">This is the work the degree was for. The flood study is where I started. The platforms are where I took it.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Boundaries</span><span class="tag">Public code</span></div>
+            <h2>RealitySync</h2>
+            <p class="summary">Kenya’s national, county, and sub-county boundaries are only useful once someone has checked them, before they are used to train a model. RealitySync tests the geometry, keeps a curated set, and puts it on a map you can argue with. Accepted as a poster at IEEE AP-GARSS 2026.</p>
+            <p class="links">
+              <a href="geo.html">Full write-up</a>
+              <a href="https://github.com/Orusaki-tech/portal" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Tana River</span><span class="tag">Private</span></div>
+            <h2>Climate Pulse</h2>
+            <p class="summary">Tana River. Climate, health, and gender-based violence on one map, including where emergency obstetric care does not reach. The repository stays private. I will walk through it.</p>
+            <p class="links"><a href="geo.html">Full write-up</a></p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Earth Engine</span><span class="tag">Public code</span></div>
+            <h2>Mining satellite study</h2>
+            <p class="summary">A small box of land, about 4.8°N–5.1°N and 29.3°E–29.6°E. ASTER for clay, iron, and carbonate. PALSAR for the breaks in the ground. SRTM for the shape of it. I compared 2001–2006 with 2023–2024.</p>
+            <p class="links">
+              <a href="geo.html">Full write-up</a>
+              <a href="https://github.com/Orusaki-tech/mining" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">ArcGIS Pro</span><span class="tag">Public</span></div>
+            <h2>Elephant mortality in Zimbabwe</h2>
+            <p class="summary">A student map in ArcGIS Pro: where elephants died in Zimbabwe, and the cause on the record. The PDF is the whole deliverable.</p>
+            <p class="links">
+              <a href="https://github.com/Orusaki-tech/Elephant-Mortality-In-Zimbabwe" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/Orusaki-tech/Elephant-Mortality-In-Zimbabwe/blob/main/Okware%20Tom%20Elephant%20Mortality%20Assignment.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block" id="data">
+        <h2>Data engineering</h2>
+        <p class="intro">I want a pipeline I can run again next month and get the same answer.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Energy</span><span class="tag">Public code</span></div>
+            <h2>Virtual Power Plant</h2>
+            <p class="summary">Britain’s solar climbs in summer while demand falls. Ireland’s spot prices jump in winter. I ran grid load, generation, and prices through pandas and dbt, and queried them in DuckDB.</p>
+            <p class="links"><a href="https://github.com/Orusaki-tech/Virtual-Power-Plant" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Markets</span><span class="tag">Public code</span></div>
+            <h2>Pulse Price AI</h2>
+            <p class="summary">First place at Africa AI Week 2025. The collection job and the API are different programs. Gemini writes prices into SQLite. FastAPI only reads that file, and the price goes out over USSD to a feature phone.</p>
+            <p class="links"><a href="https://github.com/Orusaki-tech/ai-hack" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Warehouse</span><span class="tag">Public code</span></div>
+            <h2>RealitySync and Climate Pulse</h2>
+            <p class="summary">dbt models sit on PostGIS under RealitySync, and the same warehouse sits under Climate Pulse. The raster tiles are served beside that warehouse, so the map and the table are looking at the same data.</p>
+            <p class="links">
+              <a href="geo.html">Geospatial write-up</a>
+              <a href="https://github.com/Orusaki-tech/portal" target="_blank" rel="noopener noreferrer">RealitySync</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block" id="devops">
+        <h2>DevOps</h2>
+        <p class="intro">I passed KCNA in June 2025. What I run day to day is Docker Compose, GitHub Actions, Terraform on Google Cloud, and Cloud Build.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Google Cloud</span><span class="tag">Live</span></div>
+            <h2>EventFlow</h2>
+            <p class="summary">Terraform stands up the Google Cloud side. Docker Compose runs the API, with Caddy in front and Redis beside it. GitHub Actions tests it and deploys it.</p>
+            <p class="links">
+              <a href="systems.html">Operations write-up</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Deploy</span><span class="tag">Live</span></div>
+            <h2>Affordable Gadgets</h2>
+            <p class="summary">The storefront and the admin are on Vercel. The API runs in Docker on Google Compute Engine. Terraform stands up the machines, and Cloud Build puts the image there. That deploy brought the cloud bill down by about $300 a month and has held above 99.9% availability.</p>
+            <p class="links">
+              <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Release</span><span class="tag">Live</span></div>
+            <h2>FELBright</h2>
+            <p class="summary">A push to main builds the site and puts it on felbright.com. Small, and it has been reliable.</p>
+            <p class="links"><a href="https://felbright.com" target="_blank" rel="noopener noreferrer">felbright.com</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block" id="monitoring">
+        <h2>Monitoring</h2>
+        <p class="intro">I would rather see a slow API on a chart than hear about it from a customer.</p>
+        <div class="list">
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Grafana</span><span class="tag">Live</span></div>
+            <h2>EventFlow API dashboard</h2>
+            <p class="summary">The board is named EventFlow API. It shows request rate, how slow the slowest requests are, and the share of server errors. Prometheus and Grafana come up with the rest of the stack.</p>
+            <p class="links">
+              <a href="systems.html">Operations write-up</a>
+            </p>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><span class="tag">Grafana · k6</span><span class="tag">Live</span></div>
+            <h2>Affordable Gadgets dashboards</h2>
+            <p class="summary">One board for the Django API, one for the numbers the business looks at, one for the marketing funnel, one for the day, and one for the k6 load tests. The shop has held above 99.9% availability.</p>
+            <p class="links">
+              <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="role-block contact-block" id="contact">
+        <h2>Get in touch</h2>
+        <p class="intro">I work between Nairobi and Kampala. Email is the reliable way to reach me. If the role is geospatial software, a data pipeline, a backend, or the deploy around them, write. I will walk through the private code.</p>
+        <p class="reach"><a href="mailto:okwaretom12@gmail.com">okwaretom12@gmail.com</a></p>
+        <ul class="contact-list">
+          <li><a href="tel:+254727504393">Phone <span>+254 727 504 393</span></a></li>
+          <li><a href="https://github.com/Orusaki-tech" target="_blank" rel="noopener noreferrer">GitHub <span>Orusaki-tech</span></a></li>
+          <li><a href="https://www.linkedin.com/in/tom-okware-543abb218/" target="_blank" rel="noopener noreferrer">LinkedIn <span>Tom Okware</span></a></li>
+          <li><a href="https://x.com/OkwareTomPo" target="_blank" rel="noopener noreferrer">X <span>OkwareTomPo</span></a></li>
+          <li><a href="https://www.credly.com/users/okware-tom" target="_blank" rel="noopener noreferrer">Credly <span>okware-tom</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <nav class="tabbar" aria-label="Primary">
+    <a href="index.html" aria-current="page">Roles</a>
+    <a href="geo.html">Geo</a>
+    <a href="systems.html">Systems</a>
+    <a href="about.html">About</a>
+  </nav>
+  <script src="js/site.js"></script>
+</body>
+</html>

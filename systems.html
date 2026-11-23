@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Systems — Okware Tom Polycarp</title>
+  <meta name="description" content="Energy prices, agricultural prices, deploys, and the dashboards Okware Tom Polycarp actually runs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html">Okware<span>Nairobi · Kampala</span></a>
+      <div class="header-actions">
+        <nav class="desk-nav" aria-label="Primary">
+          <a href="index.html">Roles</a>
+          <a href="geo.html">Geospatial</a>
+          <a href="systems.html" aria-current="page">Systems</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <div class="shell">
+      <p class="kicker">DevOps and data systems</p>
+      <h1>Systems</h1>
+      <p class="intro">Two of these are data jobs I can re-run. Two are smaller tools. The operations around the bigger products live here as well: Docker, GitHub Actions, Terraform and Cloud Build on Google Cloud, and Grafana beside Prometheus. The Affordable Gadgets API runs in Docker on Compute Engine. I passed KCNA in June 2025. Certificate LF-fcvselgx2z.</p>
+      <ul class="capabilities">
+        <li>
+          <strong>What I look at</strong>
+          <span>On EventFlow: how often the API is called, how slow the slow calls are, and how often it returns an error. On Affordable Gadgets: the Django API, the business numbers, the marketing funnel, the day, and the k6 tests.</span>
+        </li>
+        <li>
+          <strong>How it ships</strong>
+          <span>Docker Compose, GitHub Actions, Terraform, Cloud Build. Caddy sits in front of the EventFlow API. The shop API is Docker on Compute Engine, and that deploy brought the cloud bill down by about $300 a month.</span>
+        </li>
+      </ul>
+      <div class="list">
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Energy</span><span class="tag">Public</span></div>
+          <h2>Virtual Power Plant</h2>
+          <p class="summary">What the grid is doing in Britain and Ireland, in a pipeline I can re-run.</p>
+          <p class="detail">Solar in Britain rises in summer while people use less. Ireland’s spot prices spike in winter. Notebooks and dbt carry load, generation, and price. DuckDB is where I ask the questions.</p>
+          <p class="stack">Python · pandas · dbt · DuckDB · Jupyter</p>
+          <p class="links"><a href="https://github.com/Orusaki-tech/Virtual-Power-Plant" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Markets</span><span class="tag">Public</span></div>
+          <h2>Pulse Price AI</h2>
+          <p class="summary">First place at Africa AI Week 2025. Agricultural prices, split so the collector can fail on its own, then sent to a feature phone over USSD.</p>
+          <p class="detail">One job asks Gemini for prices and writes SQLite. Another job, FastAPI, only reads that database. A messy model response stays in the collector. The price a farmer hears goes out over USSD.</p>
+          <p class="stack">Gemini · FastAPI · SQLAlchemy · Pydantic · SQLite · USSD</p>
+          <p class="links"><a href="https://github.com/Orusaki-tech/ai-hack" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Web</span><span class="tag">Private</span></div>
+          <h2>World Healing Trinity Place</h2>
+          <p class="summary">The site for a ministry in Kampala. The code stays private.</p>
+          <p class="detail">World Healing Trinity Place Limited, on Trinity Heights Road. Worship, healing ministry, vocational training, outreach, prayer, and giving. It is a React site, with no separate backend.</p>
+          <p class="stack">React · TypeScript · Vite</p>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><span class="tag">Developer tool</span><span class="tag">Public</span></div>
+          <h2>ContextTrim</h2>
+          <p class="summary">A local tool that keeps junk files out of an AI coding session.</p>
+          <p class="detail">It counts tokens on disk and writes a .cursorignore. It does not call a model. Lockfiles are already ignored. This catches the rest: build output, minified bundles, and big data files that still get pulled into the window.</p>
+          <p class="stack">TypeScript · Node</p>
+          <p class="links"><a href="https://github.com/Orusaki-tech/contexttrim" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </article>
+      </div>
+      <section class="role-block contact-block" id="contact">
+        <h2>Get in touch</h2>
+        <p class="intro">I work between Nairobi and Kampala. Email is the reliable way to reach me. If the role is geospatial software, a data pipeline, a backend, or the deploy around them, write. I will walk through the private code.</p>
+        <p class="reach"><a href="mailto:okwaretom12@gmail.com">okwaretom12@gmail.com</a></p>
+        <ul class="contact-list">
+          <li><a href="tel:+254727504393">Phone <span>+254 727 504 393</span></a></li>
+          <li><a href="https://github.com/Orusaki-tech" target="_blank" rel="noopener noreferrer">GitHub <span>Orusaki-tech</span></a></li>
+          <li><a href="https://www.linkedin.com/in/tom-okware-543abb218/" target="_blank" rel="noopener noreferrer">LinkedIn <span>Tom Okware</span></a></li>
+          <li><a href="https://x.com/OkwareTomPo" target="_blank" rel="noopener noreferrer">X <span>OkwareTomPo</span></a></li>
+          <li><a href="https://www.credly.com/users/okware-tom" target="_blank" rel="noopener noreferrer">Credly <span>okware-tom</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <nav class="tabbar" aria-label="Primary">
+    <a href="index.html">Roles</a>
+    <a href="geo.html">Geo</a>
+    <a href="systems.html" aria-current="page">Systems</a>
+    <a href="about.html">About</a>
+  </nav>
+  <script src="js/site.js"></script>
+</body>
+</html>
