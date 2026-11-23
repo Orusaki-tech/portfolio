@@ -297,18 +297,22 @@ h2 {
 
 .shot-link {
   display: block;
-  margin: 0.95rem 0 0;
+  margin: 1.15rem 0 0;
   text-decoration: none;
 }
 
 .shot {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
   border: 1px solid var(--line);
+  border-radius: 10px;
   background: var(--soft);
+}
+
+.shot-link:hover .shot,
+.shot-link:focus-visible .shot {
+  border-color: var(--muted);
 }
 
 .detail {
@@ -416,9 +420,11 @@ h2 {
   font-family: var(--serif);
   font-size: clamp(1.55rem, 4.2vw, 2.35rem);
   letter-spacing: -0.03em;
-  line-height: 1.2;
+  line-height: 1.35;
   overflow-wrap: anywhere;
-  text-underline-offset: 0.16em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.08em;
 }
 
 .reach a:hover {
@@ -480,4 +486,9 @@ h2 {
   .desk-nav { display: flex; }
   .tabbar { display: none; }
   main { padding-bottom: 4rem; }
+
+  .shot-link {
+    width: min(1100px, calc(100vw - 4rem));
+    margin-inline: calc((100% - min(1100px, 100vw - 4rem)) / 2);
+  }
 }
