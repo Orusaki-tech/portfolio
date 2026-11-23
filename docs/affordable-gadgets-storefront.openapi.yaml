@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Affordable Gadgets storefront API
+  version: "1.0.0"
+  description: |
+    The routes a shopper uses: the catalogue, search, and a financing enquiry.
+    Staff routes, refunds, M-Pesa, Pesapal, and payment callbacks are not in this file.
+    This file is not connected to the live API.
+paths:
+  /api/v1/public/products/:
+    get:
+      operationId: listProducts
+      summary: List products
+      parameters:
+        - name: search
+          in: query
+          description: Text the shopper typed.
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: page_size
+          in: query
+          schema:
+            type: integer
+        - name: featured
+          in: query
+          description: Pass 1 to limit the list to featured products.
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A page of products from the public catalogue.
+  /api/v1/public/products/{id}/:
+    get:
+      operationId: getProduct
+      summary: One product
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: The product.
+        "404":
+          description: No product with that id.
+  /api/v1/public/financing/inquiry/:
+    post:
+      operationId: createFinancingInquiry
+      summary: Leave a financing enquiry
+      description: Records an enquiry from the storefront. It does not take a payment.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Enquiry fields the storefront sends.
+      responses:
+        "200":
+          description: Enquiry recorded.

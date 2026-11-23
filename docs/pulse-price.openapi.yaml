@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Pulse Price AI API
+  version: "1.0.0"
+  description: |
+    Read-only agricultural market prices. A separate program asks the model for prices and writes them down. This API only reads that store.
+    This file is a static spec. It is not connected to a live server.
+paths:
+  /market-data/:
+    get:
+      operationId: listMarketData
+      summary: List market prices
+      responses:
+        "200":
+          description: Every stored price record.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarketData"
+  /market-data/{item_id}:
+    get:
+      operationId: getMarketData
+      summary: One price record
+      parameters:
+        - name: item_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: The record.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MarketData"
+        "404":
+          description: No record with that id.
+components:
+  schemas:
+    MarketData:
+      type: object
+      required:
+        - id
+        - crop
+        - location
+        - price
+        - date_updated
+        - update_frequency
+      properties:
+        id:
+          type: integer
+        crop:
+          type: string
+        location:
+          type: string
+        price:
+          type: string
+        date_updated:
+          type: string
+          format: date-time
+        update_frequency:
+          type: string
+        source:
+          type: string
+          nullable: true
