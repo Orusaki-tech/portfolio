@@ -493,6 +493,8 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  width: fit-content;
+  max-width: 100%;
   margin-top: 1.15rem;
   padding: 0.65rem 1.05rem;
   border-radius: 999px;
@@ -502,6 +504,7 @@ h2 {
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
 .whatsapp:hover {
@@ -510,8 +513,10 @@ h2 {
 }
 
 .whatsapp svg {
-  width: 1.05rem;
-  height: 1.05rem;
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   fill: currentColor;
 }
 
