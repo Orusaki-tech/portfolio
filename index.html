@@ -14,6 +14,9 @@
       var saved = localStorage.getItem("theme");
       var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       document.documentElement.setAttribute("data-theme", theme);
+      var roles = ["interface", "frontend", "backend", "geospatial", "data", "devops", "monitoring", "contact"];
+      var hash = location.hash.slice(1);
+      document.documentElement.setAttribute("data-role", roles.indexOf(hash) === -1 ? "none" : hash);
     })();
   </script>
 </head>
@@ -68,25 +71,26 @@
         <a href="https://www.linkedin.com/in/tom-okware-543abb218/" target="_blank" rel="noopener noreferrer">LinkedIn · Tom Okware</a>
         <a href="https://x.com/OkwareTomPo" target="_blank" rel="noopener noreferrer">X · OkwareTomPo</a>
       </p>
+      <p class="chip-prompt">Choose a chip to see the work done in that area.</p>
       <nav class="jumps" aria-label="Roles">
         <a href="#interface">Interface</a>
         <a href="#frontend">Frontend</a>
         <a href="#backend">Backend</a>
         <a href="#geospatial">Geospatial</a>
         <a href="#data">Data</a>
-          <a href="#devops">DevOps</a>
-          <a href="#monitoring">Monitoring</a>
-          <a href="#contact">Get in touch</a>
-        </nav>
+        <a href="#devops">DevOps</a>
+        <a href="#monitoring">Monitoring</a>
+        <a href="#contact">Get in touch</a>
+      </nav>
 
       <section class="role-block" id="interface">
         <h2>Interface</h2>
-        <p class="intro">These are the pages a person opens. I worked out the flow, then I built it.</p>
+        <p class="intro">Each of these started with something that was stuck. I worked out the flow, then I built the page.</p>
         <div class="list">
           <article class="entry">
             <div class="entry-top"><span class="tag">Shop</span><span class="tag">Live</span></div>
             <h2>Affordable Gadgets</h2>
-            <p class="summary">Staff were receipting sales, stock, and the day’s money by hand, across 200 to 500 products, and enquiries were dying in chat. The storefront is for browsing, comparing four phones, and leaving a lead. The console is where the shop runs stock, orders, returns, and the money. M-Pesa and Pesapal take the payment.</p>
+            <p class="summary">Staff were receipting sales, stock, and the day’s money by hand, across 200 to 500 products, and enquiries were dying in chat. Browsing, comparing four phones, and leaving a lead is the storefront. Stock, orders, returns, and the day’s money are the console. M-Pesa and Pesapal take the payment.</p>
             <a class="shot-link" href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">
               <img class="shot" src="images/affordable-gadgets.png" alt="Affordable Gadgets storefront, with a budget search and a Samsung Galaxy Z Fold banner." width="1280" height="800">
             </a>
@@ -97,7 +101,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Firm</span><span class="tag">Live</span></div>
             <h2>FELBright &amp; Co.</h2>
-            <p class="summary">An accounting firm. I built the public site, the CPA academy, and the place students and faculty sign in. It is live at felbright.com.</p>
+            <p class="summary">An accounting firm needed a public site, a CPA academy, and a place for students and faculty to sign in. I built those three. It is live at felbright.com.</p>
             <a class="shot-link" href="https://felbright.com" target="_blank" rel="noopener noreferrer">
               <img class="shot" src="images/felbright.png" alt="FELBright and Co. homepage, with audit, tax, and CPA Academy services." width="1280" height="800">
             </a>
@@ -106,7 +110,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Community</span><span class="tag">Live</span></div>
             <h2>SCALE</h2>
-            <p class="summary">SCALE works with women, girls, and young people in Luweero. They can change the words and pictures in the browser, so a sentence does not wait on a developer.</p>
+            <p class="summary">A sentence on the site had to wait on a developer. SCALE works with women, girls, and young people in Luweero. They change the words and pictures in the browser.</p>
             <a class="shot-link" href="https://scaleinitative.com/" target="_blank" rel="noopener noreferrer">
               <img class="shot" src="images/scale.png" alt="SCALE homepage, with the Luweero District hero and a call to learn more or donate." width="1280" height="800">
             </a>
@@ -115,24 +119,24 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Events</span><span class="tag">Private</span></div>
             <h2>EventFlow</h2>
-            <p class="summary">A place to find something to go to, and a desk for the person putting it on: listings, tickets, payouts. I watch the API from Grafana when it gets slow or starts failing. The organiser desk stays private.</p>
+            <p class="summary">Someone needs a place to find an event. The person putting it on needs listings, tickets, and payouts. That is the public page and the organiser desk. I watch the API from Grafana when it gets slow or starts failing. The organiser desk stays private.</p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">Ministry</span><span class="tag">Private</span></div>
             <h2>World Healing Trinity Place</h2>
-            <p class="summary">A ministry on Trinity Heights Road in Kampala. Worship, a healing ministry, vocational training, and a way for someone to give. I built the site a visitor can actually read. The code stays private.</p>
+            <p class="summary">A visitor needed to read what the ministry does: worship, a healing ministry, vocational training, and a way to give. World Healing Trinity Place is on Trinity Heights Road in Kampala. I built that site. The code stays private.</p>
           </article>
         </div>
       </section>
 
       <section class="role-block" id="frontend">
         <h2>Frontend engineering</h2>
-        <p class="intro">Same sites. This is the code that runs in the browser.</p>
+        <p class="intro">Same problems. This is the half that runs in the browser.</p>
         <div class="list">
           <article class="entry">
             <div class="entry-top"><span class="tag">Next.js</span><span class="tag">Live</span></div>
             <h2>Affordable Gadgets storefront</h2>
-            <p class="summary">Next.js shop. Search, filters, a comparison of four products, and a checkout that becomes a sales lead.</p>
+            <p class="summary">Enquiries were dying in chat. A shopper needed search, filters, a comparison of four products, and a checkout that becomes a sales lead. That is the Next.js shop.</p>
             <a class="shot-link" href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">
               <img class="shot" src="images/affordable-gadgets.png" alt="Affordable Gadgets storefront, with a budget search and a Samsung Galaxy Z Fold banner." width="1280" height="800">
             </a>
@@ -143,17 +147,17 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">React</span><span class="tag">Live</span></div>
             <h2>Affordable Gadgets admin</h2>
-            <p class="summary">The screen the shop actually lives in: products, units, orders, leads, promotions, delivery, returns, and the day’s money. Sales, stock, and finance are separate roles. The console stays private.</p>
+            <p class="summary">Sales, stock, and the day’s money were still being receipted by hand. The admin is products, units, orders, leads, promotions, delivery, returns, and the money, with sales, stock, and finance as separate roles. The console stays private.</p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">Next.js</span><span class="tag">Private</span></div>
             <h2>EventFlow web</h2>
-            <p class="summary">Next.js for the public site and the organiser console. A React Native app sits with the site. The organiser desk and the code stay private.</p>
+            <p class="summary">The public needed a place to find an event, and the organiser needed listings, tickets, and payouts, including on a phone. Next.js is the site and the organiser console. A React Native app sits with the site. The organiser desk and the code stay private.</p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">MapLibre</span><span class="tag">Public code</span></div>
             <h2>RealitySync map</h2>
-            <p class="summary">A Next.js and MapLibre screen for sitting with a boundary and deciding whether it is good enough to keep.</p>
+            <p class="summary">A boundary is only useful once someone can sit with it and say whether it is good enough to keep. This Next.js and MapLibre screen is that sitting.</p>
             <p class="links">
               <a href="geo.html">Geospatial write-up</a>
               <a href="https://github.com/Orusaki-tech/portal" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -162,7 +166,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Vite</span><span class="tag">Live</span></div>
             <h2>FELBright, SCALE, and the ministry site</h2>
-            <p class="summary">React and Vite for FELBright and the ministry. TanStack Start for SCALE, because the editors needed the page and the content studio in one app.</p>
+            <p class="summary">FELBright needed a public site and a sign-in. SCALE’s editors needed the page and the content studio in one app, or a sentence waited on a developer. The ministry needed a page a visitor could read. React and Vite for FELBright and the ministry. TanStack Start for SCALE.</p>
             <p class="links">
               <a href="https://felbright.com" target="_blank" rel="noopener noreferrer">felbright.com</a>
               <a href="https://scaleinitative.com/" target="_blank" rel="noopener noreferrer">SCALE</a>
@@ -173,12 +177,12 @@
 
       <section class="role-block" id="backend">
         <h2>Backend engineering</h2>
-        <p class="intro">The part that holds the stock, takes the payment, and answers the map.</p>
+        <p class="intro">The stock, the payment, and the map still had a problem after the page was built. This is the part that answers them.</p>
         <div class="list">
           <article class="entry">
             <div class="entry-top"><span class="tag">Django</span><span class="tag">Live</span></div>
             <h2>Affordable Gadgets API</h2>
-            <p class="summary">Django keeps the inventory and the orders for 200 to 500 products. M-Pesa STK push, callbacks, refunds, and Pesapal replaced the handwritten receipt. A TypeScript client generated from the OpenAPI spec keeps the shop and the admin on the same API. The code stays private. The public reference covers the catalogue, search, and a financing enquiry. Payments and staff routes are not in it.</p>
+            <p class="summary">Staff were receipting inventory and orders by hand, across 200 to 500 products. Django keeps both. M-Pesa STK push, callbacks, refunds, and Pesapal replaced the handwritten receipt. A TypeScript client generated from the OpenAPI spec keeps the shop and the admin on the same API. The code stays private. The public reference covers the catalogue, search, and a financing enquiry. Payments and staff routes are not in it.</p>
             <p class="links">
               <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
               <a href="docs/affordable-gadgets.html">Storefront API reference</a>
@@ -187,12 +191,12 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">FastAPI</span><span class="tag">Live</span></div>
             <h2>EventFlow API</h2>
-            <p class="summary">FastAPI for discovery, listings, and tickets. Stripe takes the payment. Eight background workers take the jobs that should not wait on the request. pgvector finds events by place and by community, Google Maps supplies the traffic, and a Google calendar stays in sync. The organiser desk, the code, and the API reference stay private.</p>
+            <p class="summary">Finding an event, listing it, and selling the ticket were the problem. FastAPI does discovery, listings, and tickets. Stripe takes the payment. Eight background workers take the jobs that should not wait on the request. pgvector finds events by place and by community, Google Maps supplies the traffic, and a Google calendar stays in sync. The organiser desk, the code, and the API reference stay private.</p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">FastAPI</span><span class="tag">Public code</span></div>
             <h2>Pulse Price AI</h2>
-            <p class="summary">First place at Africa AI Week 2025. Gemini gathers agricultural prices for a farmer still on a basic phone. A separate FastAPI app only reads them, so a messy model response stays in the collector, and the price goes out over USSD. The reference lists those two read routes and is not connected to a live server.</p>
+            <p class="summary">A farmer on a basic phone could not get the agricultural price, and a messy model response could not be what went out. First place at Africa AI Week 2025. Gemini gathers the prices. A separate FastAPI app only reads them, so the messy response stays in the collector and the price goes out over USSD. The reference lists those two read routes and is not connected to a live server.</p>
             <p class="links">
               <a href="https://github.com/Orusaki-tech/ai-hack" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="docs/pulse-price.html">API reference</a>
@@ -203,7 +207,7 @@
 
       <section class="role-block" id="geospatial">
         <h2>Geospatial software and data</h2>
-        <p class="intro">This is the work the degree was for. The flood study is where I started. The platforms are where I took it.</p>
+        <p class="intro">This is the work the degree was for. It started with a flood a ground count could not keep up with. The platforms are where I took that kind of question.</p>
         <div class="list">
           <article class="entry">
             <div class="entry-top"><span class="tag">Boundaries</span><span class="tag">Public code</span></div>
@@ -217,13 +221,13 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Tana River</span><span class="tag">Private</span></div>
             <h2>Climate Pulse</h2>
-            <p class="summary">Tana River. Climate, health, and gender-based violence on one map, including where emergency obstetric care does not reach. The repository stays private. I will walk through it.</p>
+            <p class="summary">Tana River needed climate, health, and gender-based violence on one map, including where emergency obstetric care does not reach. That map is Climate Pulse. The repository stays private. I will walk through it.</p>
             <p class="links"><a href="geo.html">Full write-up</a></p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">Earth Engine</span><span class="tag">Public code</span></div>
             <h2>Mining satellite study</h2>
-            <p class="summary">A small box of land, about 4.8°N–5.1°N and 29.3°E–29.6°E. ASTER for clay, iron, and carbonate. PALSAR for the breaks in the ground. SRTM for the shape of it. I compared 2001–2006 with 2023–2024.</p>
+            <p class="summary">The question was what had changed in that ground between 2001–2006 and 2023–2024. The box is about 4.8°N–5.1°N and 29.3°E–29.6°E. ASTER for clay, iron, and carbonate. PALSAR for the breaks in the ground. SRTM for the shape of it.</p>
             <p class="links">
               <a href="geo.html">Full write-up</a>
               <a href="https://github.com/Orusaki-tech/mining" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -232,7 +236,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">ArcGIS Pro</span><span class="tag">Public</span></div>
             <h2>Elephant mortality in Zimbabwe</h2>
-            <p class="summary">A student map in ArcGIS Pro: where elephants died in Zimbabwe, and the cause on the record. The PDF is the whole deliverable.</p>
+            <p class="summary">The question was where elephants died in Zimbabwe, and the cause on the record. I mapped that in ArcGIS Pro. The PDF is the whole deliverable.</p>
             <p class="links">
               <a href="https://github.com/Orusaki-tech/Elephant-Mortality-In-Zimbabwe" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://github.com/Orusaki-tech/Elephant-Mortality-In-Zimbabwe/blob/main/Okware%20Tom%20Elephant%20Mortality%20Assignment.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
@@ -243,24 +247,24 @@
 
       <section class="role-block" id="data">
         <h2>Data engineering</h2>
-        <p class="intro">I want a pipeline I can run again next month and get the same answer.</p>
+        <p class="intro">The problem is getting the same figure when the pipeline runs again next month.</p>
         <div class="list">
           <article class="entry">
             <div class="entry-top"><span class="tag">Energy</span><span class="tag">Public code</span></div>
             <h2>Virtual Power Plant</h2>
-            <p class="summary">Britain’s solar climbs in summer while demand falls. Ireland’s spot prices jump in winter. I ran grid load, generation, and prices through pandas and dbt, and queried them in DuckDB.</p>
+            <p class="summary">Britain’s solar climbs in summer while demand falls. Ireland’s spot prices jump in winter. That was the question. I ran grid load, generation, and prices through pandas and dbt, and queried them in DuckDB.</p>
             <p class="links"><a href="https://github.com/Orusaki-tech/Virtual-Power-Plant" target="_blank" rel="noopener noreferrer">GitHub</a></p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">Markets</span><span class="tag">Public code</span></div>
             <h2>Pulse Price AI</h2>
-            <p class="summary">First place at Africa AI Week 2025. The collection job and the API are different programs. Gemini writes prices into SQLite. FastAPI only reads that file, and the price goes out over USSD to a feature phone.</p>
+            <p class="summary">A farmer on a basic phone could not get the price, and the program that asks the model could not be the program that answers the phone. First place at Africa AI Week 2025. The collection job and the API are different programs. Gemini writes prices into SQLite. FastAPI only reads that file, and the price goes out over USSD to a feature phone.</p>
             <p class="links"><a href="https://github.com/Orusaki-tech/ai-hack" target="_blank" rel="noopener noreferrer">GitHub</a></p>
           </article>
           <article class="entry">
             <div class="entry-top"><span class="tag">Warehouse</span><span class="tag">Public code</span></div>
             <h2>RealitySync and Climate Pulse</h2>
-            <p class="summary">dbt models sit on PostGIS under RealitySync, and the same warehouse sits under Climate Pulse. The raster tiles are served beside that warehouse, so the map and the table are looking at the same data.</p>
+            <p class="summary">A map and a table are only useful when they are looking at the same data. dbt models sit on PostGIS under RealitySync, and the same warehouse sits under Climate Pulse. The raster tiles are served beside that warehouse.</p>
             <p class="links">
               <a href="geo.html">Geospatial write-up</a>
               <a href="https://github.com/Orusaki-tech/portal" target="_blank" rel="noopener noreferrer">RealitySync</a>
@@ -271,12 +275,12 @@
 
       <section class="role-block" id="devops">
         <h2>DevOps</h2>
-        <p class="intro">I passed KCNA in June 2025. What I run day to day is Docker Compose, GitHub Actions, Terraform on Google Cloud, and Cloud Build.</p>
+        <p class="intro">The problem is a deploy I cannot stand up the same way next time. I passed KCNA in June 2025. What I run day to day is Docker Compose, GitHub Actions, Terraform on Google Cloud, and Cloud Build.</p>
         <div class="list">
           <article class="entry">
             <div class="entry-top"><span class="tag">Google Cloud</span><span class="tag">Live</span></div>
             <h2>EventFlow</h2>
-            <p class="summary">Terraform stands up the Google Cloud side. Docker Compose runs the API, with Caddy in front and Redis beside it. GitHub Actions tests it and deploys it.</p>
+            <p class="summary">The API, Caddy, and Redis had to come up together, and a change had to be tested before it went out. Terraform stands up the Google Cloud side. Docker Compose runs the API, with Caddy in front and Redis beside it. GitHub Actions tests it and deploys it.</p>
             <p class="links">
               <a href="systems.html">Operations write-up</a>
             </p>
@@ -284,7 +288,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Deploy</span><span class="tag">Live</span></div>
             <h2>Affordable Gadgets</h2>
-            <p class="summary">The storefront and the admin are on Vercel. The API runs in Docker on Google Compute Engine. Terraform stands up the machines, and Cloud Build puts the image there. That deploy brought the cloud bill down by about $300 a month and has held above 99.9% availability.</p>
+            <p class="summary">The cloud bill was the problem, and the API still had to stay up. The storefront and the admin are on Vercel. The API runs in Docker on Google Compute Engine. Terraform stands up the machines, and Cloud Build puts the image there. That deploy brought the cloud bill down by about $300 a month and has held above 99.9% availability.</p>
             <p class="links">
               <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
             </p>
@@ -292,7 +296,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Release</span><span class="tag">Live</span></div>
             <h2>FELBright</h2>
-            <p class="summary">A push to main builds the site and puts it on felbright.com. Small, and it has been reliable.</p>
+            <p class="summary">Getting a change onto felbright.com had to be a push to main, and it had to keep working. That is the release. Small, and it has been reliable.</p>
             <p class="links"><a href="https://felbright.com" target="_blank" rel="noopener noreferrer">felbright.com</a></p>
           </article>
         </div>
@@ -305,7 +309,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Grafana</span><span class="tag">Live</span></div>
             <h2>EventFlow API dashboard</h2>
-            <p class="summary">The board is named EventFlow API. It shows request rate, how slow the slowest requests are, and the share of server errors. Prometheus and Grafana come up with the rest of the stack.</p>
+            <p class="summary">A slow API or a server error should show on a chart before a customer reports it. The board is named EventFlow API. It shows request rate, how slow the slowest requests are, and the share of server errors. Prometheus and Grafana come up with the rest of the stack.</p>
             <p class="links">
               <a href="systems.html">Operations write-up</a>
             </p>
@@ -313,7 +317,7 @@
           <article class="entry">
             <div class="entry-top"><span class="tag">Grafana · k6</span><span class="tag">Live</span></div>
             <h2>Affordable Gadgets dashboards</h2>
-            <p class="summary">One board for the Django API, one for the numbers the business looks at, one for the marketing funnel, one for the day, and one for the k6 load tests. The shop has held above 99.9% availability.</p>
+            <p class="summary">The shop needed the API, the business numbers, the funnel, the day, and the load tests visible, before a customer was the one who noticed. One board for the Django API, one for the numbers the business looks at, one for the marketing funnel, one for the day, and one for the k6 load tests. The shop has held above 99.9% availability.</p>
             <p class="links">
               <a href="https://affordable-gadgets-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Storefront</a>
             </p>
@@ -323,7 +327,7 @@
 
       <section class="role-block contact-block" id="contact">
         <h2>Get in touch</h2>
-        <p class="intro">I work between Nairobi and Kampala. Email is the reliable way to reach me. If the role is geospatial software, a data pipeline, a backend, or the deploy around them, write. I will walk through the private code.</p>
+        <p class="intro">I work between Nairobi and Kampala. Email is the reliable way to reach me. If the problem is geospatial software, a data pipeline, a backend, or the deploy around them, write. I will walk through the private code.</p>
         <p class="reach"><a href="mailto:okwaretom12@gmail.com">okwaretom12@gmail.com</a></p>
         <ul class="contact-list">
           <li><a href="tel:+254727504393">Phone <span>+254 727 504 393</span></a></li>

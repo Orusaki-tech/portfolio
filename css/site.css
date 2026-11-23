@@ -176,12 +176,24 @@ h1 {
   line-height: 1.55;
 }
 
+.chip-prompt {
+  margin: 1.6rem 0 0;
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+html[data-role]:not([data-role="none"]) .chip-prompt { display: none; }
+
 .jumps {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.4rem;
   margin: 1.4rem 0 0;
-  overflow-x: auto;
 }
+
+.chip-prompt + .jumps { margin-top: 0.75rem; }
 
 .jumps a {
   flex: none;
@@ -194,6 +206,43 @@ h1 {
 }
 
 .jumps a:hover { background: var(--soft); }
+
+.jumps a:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+html[data-role="interface"] .jumps a[href="#interface"],
+html[data-role="frontend"] .jumps a[href="#frontend"],
+html[data-role="backend"] .jumps a[href="#backend"],
+html[data-role="geospatial"] .jumps a[href="#geospatial"],
+html[data-role="data"] .jumps a[href="#data"],
+html[data-role="devops"] .jumps a[href="#devops"],
+html[data-role="monitoring"] .jumps a[href="#monitoring"],
+html[data-role="contact"] .jumps a[href="#contact"] {
+  background: var(--invert);
+  color: var(--invert-fg);
+  border-color: var(--invert);
+}
+
+html[data-role] .role-block { display: none; }
+
+html[data-role="interface"] #interface,
+html[data-role="frontend"] #frontend,
+html[data-role="backend"] #backend,
+html[data-role="geospatial"] #geospatial,
+html[data-role="data"] #data,
+html[data-role="devops"] #devops,
+html[data-role="monitoring"] #monitoring,
+html[data-role="contact"] #contact {
+  display: block;
+}
+
+.jumps ~ .contact-block {
+  margin-top: 2.75rem;
+  padding-top: 0;
+  border-top: 0;
+}
 
 .role-block {
   margin-top: 2.75rem;
